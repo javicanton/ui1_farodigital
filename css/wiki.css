@@ -1,0 +1,84 @@
+/* Enciclopedia de Puerto Vera · estilo de enciclopedia en línea (genérico) */
+:root {
+  --w-ink: #202122;
+  --w-muted: #54595d;
+  --w-link: #3366cc;
+  --w-border: #a2a9b1;
+  --w-box: #f8f9fa;
+  --w-head: #eaecf0;
+}
+body.wiki { margin: 0; background: #f6f6f6; color: var(--w-ink); font-family: "Helvetica Neue", Arial, "Liberation Sans", sans-serif; }
+.wiki a { color: var(--w-link); }
+.wiki-top {
+  background: #fff; border-bottom: 1px solid var(--w-border);
+}
+.wiki-top .inner {
+  max-width: 1180px; margin: 0 auto; padding: 10px 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+}
+.wiki-brand { display: flex; align-items: center; gap: 10px; color: var(--w-ink) !important; text-decoration: none !important; }
+.wiki-brand .globe {
+  width: 38px; height: 38px; border-radius: 50%; border: 2px solid #72777d;
+  display: grid; place-items: center; font-family: Georgia, serif; font-size: 20px; color: #72777d;
+}
+.wiki-brand b { display: block; font-family: Georgia, "Linux Libertine", serif; font-weight: 400; font-size: 19px; letter-spacing: .02em; }
+.wiki-brand small { display: block; font-size: 11px; color: var(--w-muted); }
+.wiki-search {
+  border: 1px solid var(--w-border); border-radius: 2px; padding: 6px 10px; min-width: 240px;
+  font-size: 13px; color: #72777d; background: #fff;
+}
+.wiki-layout { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 170px 1fr; }
+.wiki-side { padding: 20px 14px; font-size: 13px; }
+.wiki-side h4 { font-size: 12px; color: var(--w-muted); font-weight: 400; margin: 18px 0 6px; border-bottom: 1px solid #c8ccd1; padding-bottom: 3px; }
+.wiki-side ul { list-style: none; margin: 0; padding: 0; }
+.wiki-side li { margin: 0 0 6px; }
+.wiki-main { background: #fff; border: 1px solid var(--w-border); border-top: 0; padding: 18px 26px 40px; min-width: 0; }
+.wiki-tabs { display: flex; gap: 18px; font-size: 13px; border-bottom: 1px solid var(--w-border); margin: -6px 0 16px; }
+.wiki-tabs span { padding: 6px 0; }
+.wiki-tabs .on { border-bottom: 2px solid var(--w-ink); font-weight: 700; }
+.wiki h1 { font-family: Georgia, "Linux Libertine", "Times New Roman", serif; font-weight: 400; font-size: 30px; margin: 0; padding-bottom: 4px; border-bottom: 1px solid var(--w-border); }
+.wiki .from { font-size: 13px; color: var(--w-muted); margin: 6px 0 12px; }
+.wiki .hatnote { font-style: italic; font-size: 14px; padding-left: 26px; margin: 0 0 10px; }
+.wiki .fiction-box {
+  border: 1px solid #fc3; border-left: 8px solid #fc3; background: #fef6e7;
+  padding: 10px 14px; font-size: 14px; margin: 0 0 16px;
+}
+.wiki-main p, .wiki-main li { font-size: 15px; line-height: 1.6; }
+.wiki h2 { font-family: Georgia, "Linux Libertine", "Times New Roman", serif; font-weight: 400; font-size: 23px; margin: 26px 0 8px; padding-bottom: 3px; border-bottom: 1px solid var(--w-border); }
+.wiki h3 { font-size: 16px; margin: 18px 0 6px; }
+
+.infobox {
+  float: right; clear: right; width: 290px; margin: 0 0 16px 20px;
+  border: 1px solid var(--w-border); background: var(--w-box);
+  font-size: 13px; line-height: 1.45; border-collapse: collapse;
+}
+.infobox caption { font-size: 17px; font-weight: 700; padding: 6px; }
+.infobox th, .infobox td { padding: 4px 8px; vertical-align: top; text-align: left; }
+.infobox th { width: 42%; }
+.infobox .ib-head { background: #c8d8e8; text-align: center; font-weight: 700; }
+.infobox .ib-img { text-align: center; padding: 8px; }
+.infobox .ib-img svg { margin: 0 auto; }
+.infobox .ib-img small { display: block; color: var(--w-muted); margin-top: 4px; }
+
+.toc { display: inline-block; border: 1px solid var(--w-border); background: var(--w-box); padding: 8px 14px 10px; margin: 6px 0 10px; font-size: 14px; }
+.toc b { display: block; text-align: center; margin-bottom: 6px; }
+.toc ol { margin: 0; padding-left: 20px; }
+.toc li { font-size: 14px !important; line-height: 1.5 !important; }
+
+table.wikitable { border-collapse: collapse; border: 1px solid var(--w-border); background: var(--w-box); font-size: 14px; margin: 10px 0 14px; }
+table.wikitable th, table.wikitable td { border: 1px solid var(--w-border); padding: 5px 9px; text-align: left; vertical-align: top; }
+table.wikitable th { background: var(--w-head); }
+.party { display: inline-block; width: 10px; height: 10px; margin-right: 6px; vertical-align: middle; }
+.refs { font-size: 13px !important; }
+.refs li { font-size: 13px !important; }
+.wiki-foot { font-size: 12px; color: var(--w-muted); margin-top: 30px; border-top: 1px solid #c8ccd1; padding-top: 10px; }
+.wiki .clear { clear: both; }
+
+@media (max-width: 860px) {
+  .wiki-layout { grid-template-columns: 1fr; }
+  .wiki-side { display: none; }
+  .wiki-main { padding: 16px; border-left: 0; border-right: 0; }
+  .infobox { float: none; width: 100%; margin: 0 0 16px; }
+  .wiki-search { min-width: 0; width: 100%; }
+  .wikitable { display: block; overflow-x: auto; }
+}
