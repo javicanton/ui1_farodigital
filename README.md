@@ -6,9 +6,9 @@ Medio ficticio del Proyecto de Innovación Docente **NewsroomLab IA** (Grado en 
 
 | Archivo | Contenido |
 |---|---|
-| `index.html` | Portada del diario (una pieza de ejemplo por módulo M1 a M5) |
+| `index.html` | Portada del diario (piezas de ejemplo de cada sección) |
 | `noticia.html` | Plantilla de noticia con aviso de simulación y ficha del encargo |
-| `sobre.html` | Qué es el medio, encargos por módulo, normas de publicación y retirada |
+| `sobre.html` | Qué es el medio, encargos por sección, normas de publicación y retirada |
 | `puerto-vera.html` | Ficha enciclopédica de la ciudad ficticia (contexto y personajes) |
 | `assets/css/style.css` | Estilos del diario |
 | `assets/css/wiki.css` | Estilos de la enciclopedia |
@@ -23,6 +23,6 @@ Medio ficticio del Proyecto de Innovación Docente **NewsroomLab IA** (Grado en 
 ## Salvaguardas incluidas
 
 - Banda «SIMULACIÓN» en todas las páginas y aviso en el pie.
-- Etiqueta de módulo en cada pieza y aviso dentro del cuerpo de cada noticia.
+- Etiqueta de simulación en cada pieza y aviso dentro del cuerpo de cada noticia.
 - `noindex` en todas las páginas y `robots.txt` que bloquea buscadores.
 - Imágenes ilustrativas rotuladas como simulación; datos marcados como sintéticos.
