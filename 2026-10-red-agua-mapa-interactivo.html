@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>[Simulación] El mapa de la red de agua de Puerto Vera · El Faro de Puerto Vera</title>
+<meta name="description" content="Reportaje interactivo con datos sintéticos de la red de agua por barrio. Pieza de práctica de un medio ficticio (NewsroomLab IA, Universidad Isabel I). No describe hechos reales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;600;700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/actividad.css">
+</head>
+<body>
+
+<div class="sim-bar" role="note">
+  <div class="wrap">
+    <strong>SIMULACIÓN</strong>
+    <span>Medio ficticio con fines docentes (Proyecto de Innovación Docente NewsroomLab IA, Universidad Isabel I). Puerto Vera no existe y nada de lo publicado aquí es información sobre hechos reales.</span>
+    <a href="sobre.html">Qué es este medio</a>
+  </div>
+</div>
+
+<header class="wrap">
+  <div class="masthead" style="padding-top:14px">
+    <a href="index.html"><h1 style="font-size:clamp(30px,5vw,46px)">El Faro de Puerto Vera</h1></a>
+  </div>
+</header>
+
+<nav class="mainnav" aria-label="Secciones" style="margin-top:10px;border-top:1px solid #121212">
+  <div class="wrap">
+    <ul>
+      <li><a href="index.html">Portada</a></li>
+      <li><a href="index.html#local">Local</a></li>
+      <li><a href="index.html#local">Política</a></li>
+      <li><a href="index.html#datos">Datos</a></li>
+      <li><a href="index.html#verificacion">Verificación</a></li>
+      <li><a href="index.html#investigacion">Investigación</a></li>
+      <li><a href="index.html#cultura">Cultura</a></li>
+      <li><a href="index.html#opinion">Opinión</a></li>
+      <li class="sep" aria-hidden="true"></li>
+      <li><a href="puerto-vera.html">La ciudad</a></li>
+      <li><a href="sobre.html" class="about">Sobre este medio</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+  <article class="article wide">
+    <p class="kicker">Datos · Reportaje interactivo <span class="badge-sim">Simulación</span> <span class="badge-act">Ciberperiodismo · Actividad UD2</span></p>
+    <h1 class="hl hl-xl">El mapa de la red de agua de Puerto Vera: dónde se pierde y dónde se rompe</h1>
+    <p class="dek">Explora por barrio las pérdidas de agua, la antigüedad de las tuberías y las averías de 2025. Los tres barrios que se quedaron sin suministro el 2 de octubre figuran entre los de red más antigua.</p>
+
+    <div class="meta">
+      <span>Por <strong>Redacción</strong> (pieza del profesorado)</span>
+      <span>4 de octubre de 2026, 10:00 · 6 min</span>
+    </div>
+
+    <div class="inline-sim">
+      <strong>Pieza de práctica en un medio simulado</strong>
+      Esta pieza es un material de aula del Grado en Periodismo (Universidad Isabel I). Los hechos, las personas, las declaraciones y los datos son ficticios y forman parte de un escenario didáctico.
+    </div>
+
+    <div class="share-row">
+      <span>Compartir:</span>
+      <button type="button" id="copy-link">Copiar enlace</button>
+      <span id="copy-ok" class="ok" role="status" aria-live="polite"></span>
+      <span style="margin-left:14px">Tamaño del texto:</span>
+      <button type="button" id="fs-down" aria-label="Reducir el tamaño del texto">A-</button>
+      <button type="button" id="fs-up" aria-label="Aumentar el tamaño del texto">A+</button>
+    </div>
+
+    <div class="body">
+      <p>La avería de la calle Atarazanas reabrió el debate sobre el estado de la red. Hemos reunido los datos sintéticos de la práctica para responder a una pregunta sencilla: ¿qué barrios pierden más agua y cuáles tienen las tuberías más viejas? Puedes consultar el relato del día del corte en <a href="2026-10-corte-agua-cronologia.html">nuestra cronología</a>.</p>
+    </div>
+
+    <h2 style="font:700 22px var(--serif);margin:22px 0 6px">1. El viaje del agua</h2>
+    <figure class="infog">
+      <svg viewBox="0 0 760 210" role="img" aria-labelledby="ig-t ig-d">
+        <title id="ig-t">Infografía: el recorrido del agua en Puerto Vera</title>
+        <desc id="ig-d">El agua se capta en el río Almadel y en la desalinizadora de Las Salinas, se almacena en los depósitos de La Atalaya, recorre 410 kilómetros de red y llega a los contadores. De cada 100 litros que entran en la red, 74 llegan registrados y 26 se pierden.</desc>
+        <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#121212"/></marker></defs>
+        <g stroke="#121212" stroke-width="1.5">
+          <rect x="10" y="20" width="150" height="70" fill="#dbe9f3"/>
+          <rect x="205" y="20" width="150" height="70" fill="#dbe9f3"/>
+          <rect x="400" y="20" width="150" height="70" fill="#dbe9f3"/>
+          <rect x="595" y="20" width="150" height="70" fill="#dbe9f3"/>
+        </g>
+        <g stroke="#121212" stroke-width="1.5" marker-end="url(#ar)">
+          <line x1="162" y1="55" x2="203" y2="55"/><line x1="357" y1="55" x2="398" y2="55"/><line x1="552" y1="55" x2="593" y2="55"/>
+        </g>
+        <g text-anchor="middle" font-weight="700">
+          <text x="85" y="50">Captación</text><text x="85" y="68" font-weight="400">río Almadel</text>
+          <text x="280" y="44">Desalinizadora</text><text x="280" y="62" font-weight="400">y potabilizadora</text><text x="280" y="78" font-weight="400">(Las Salinas)</text>
+          <text x="475" y="50">Depósitos</text><text x="475" y="68" font-weight="400">(La Atalaya)</text>
+          <text x="670" y="50">Red de distribución</text><text x="670" y="68" font-weight="400">410 km de tuberías</text>
+        </g>
+        <text x="10" y="128" font-weight="700">De cada 100 litros que entran en la red</text>
+        <rect x="10" y="140" width="548" height="30" fill="#326891"/>
+        <rect x="558" y="140" width="192" height="30" fill="#a43b2f"/>
+        <text x="284" y="160" text-anchor="middle" fill="#fff" style="fill:#fff;font-weight:700">74 llegan registrados a los contadores</text>
+        <text x="654" y="160" text-anchor="middle" style="fill:#fff;font-weight:700">26 se pierden</text>
+        <text x="10" y="195" style="font-size:11px;fill:#666">Estimación municipal sintética para la práctica. Pérdidas: fugas, roturas y consumos no registrados.</text>
+      </svg>
+      <figcaption>Infografía propia con datos sintéticos.</figcaption>
+    </figure>
+
+    <h2 style="font:700 22px var(--serif);margin:22px 0 6px">2. Explora tu barrio</h2>
+    <div class="controls">
+      <div class="group" role="group" aria-label="Indicador del mapa">
+        <button type="button" data-metric="perdidas" aria-pressed="true">Pérdidas de agua</button>
+        <button type="button" data-metric="antig" aria-pressed="false">Antigüedad de la red</button>
+        <button type="button" data-metric="averias" aria-pressed="false">Averías en 2025</button>
+      </div>
+      <label>Elige tu barrio:
+        <select id="barrio-sel"><option value="">(todos)</option></select>
+      </label>
+    </div>
+
+    <div class="mapgrid">
+      <div class="mapbox">
+        <svg viewBox="0 0 640 400" id="mapa" role="group" aria-label="Mapa esquemático de los barrios de Puerto Vera. Pulsa un barrio para ver sus datos.">
+          <rect x="0" y="318" width="640" height="82" fill="#cfe0ea"/>
+          <path d="M0 318 Q80 308 160 318 T320 318 T480 318 T640 318" fill="none" stroke="#9fb3bf" stroke-width="2"/>
+          <path d="M8 30 C16 120 2 220 18 318" fill="none" stroke="#9fb3bf" stroke-width="6" stroke-linecap="round"/>
+          <polygon class="barrio" data-id="molinos" points="22,60 160,55 165,175 22,185" tabindex="0" role="button"/>
+          <polygon class="barrio" data-id="ensanche" points="175,55 340,50 345,175 170,178" tabindex="0" role="button"/>
+          <polygon class="barrio" data-id="atalaya" points="355,50 612,45 616,165 350,172" tabindex="0" role="button"/>
+          <polygon class="barrio" data-id="salinas" points="22,198 160,190 165,300 22,310" tabindex="0" role="button"/>
+          <polygon class="barrio" data-id="centro" points="175,190 330,185 335,290 170,300" tabindex="0" role="button"/>
+          <polygon class="barrio" data-id="varadero" points="345,184 470,180 475,290 340,292" tabindex="0" role="button"/>
+          <polygon class="barrio" data-id="levante" points="485,180 616,178 619,285 480,290" tabindex="0" role="button"/>
+          <g id="labels"></g>
+          <g transform="translate(588,300)" aria-hidden="true">
+            <rect x="-4" y="-34" width="8" height="30" fill="#f4f1ea" stroke="#333" stroke-width=".8"/>
+            <rect x="-4" y="-26" width="8" height="4" fill="#a43b2f"/>
+            <polygon points="0,-42 -6,-34 6,-34" fill="#333"/>
+          </g>
+          <text x="560" y="352" style="font-weight:400;font-size:11px;fill:#4b6677">Cabo Vera</text>
+          <text x="40" y="352" style="font-weight:400;font-size:11px;fill:#4b6677">Mar Mediterráneo (ficticio)</text>
+        </svg>
+        <div class="legend" id="leyenda" aria-hidden="true"></div>
+        <p class="caption">Mapa esquemático, no a escala. Datos sintéticos para la práctica.</p>
+      </div>
+      <div class="panel" id="panel" aria-live="polite">
+        <h3>Pulsa un barrio</h3>
+        <p>Selecciona un barrio en el mapa o en el desplegable para ver sus datos.</p>
+      </div>
+    </div>
+
+    <details class="datos">
+      <summary>Ver los datos en tabla</summary>
+      <table class="plain" id="tabla">
+        <thead><tr><th>Barrio</th><th>Pérdidas (%)</th><th>Antigüedad media (años)</th><th>Averías 2025</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </details>
+
+    <h2 style="font:700 22px var(--serif);margin:22px 0 6px">3. Tres puntos críticos</h2>
+    <div class="slider" id="slider" role="group" aria-roledescription="carrusel" aria-label="Galería de tres imágenes">
+      <figure><div class="ph" role="img" aria-label="Imagen ilustrativa simulada de una tubería antigua">Imagen ilustrativa (simulación)</div><figcaption>1. Conducción de fibrocemento en El Varadero. Imagen ilustrativa de la simulación.</figcaption></figure>
+      <figure><div class="ph" role="img" aria-label="Imagen ilustrativa simulada de una zanja de reparación">Imagen ilustrativa (simulación)</div><figcaption>2. Zanja de reparación en la calle Atarazanas. Imagen ilustrativa de la simulación.</figcaption></figure>
+      <figure><div class="ph" role="img" aria-label="Imagen ilustrativa simulada de un depósito de agua">Imagen ilustrativa (simulación)</div><figcaption>3. Depósito de La Atalaya. Imagen ilustrativa de la simulación.</figcaption></figure>
+      <div class="slider-nav" hidden><button type="button" id="sl-prev">Anterior</button><span id="sl-count" aria-live="polite">1 / 3</span><button type="button" id="sl-next">Siguiente</button></div>
+    </div>
+
+    <div class="body">
+      <h2>Cómo hemos hecho este mapa</h2>
+      <p>Los valores proceden de un conjunto de datos sintético, generado con IA y revisado por el profesorado, que simula el inventario de la red de AGUAVERA. La media municipal de pérdidas (26 %) es una estimación ponderada por kilómetros de red. No se han contrastado con ninguna fuente real porque no existe.</p>
+    </div>
+
+    <section class="brief-card" aria-label="Ficha de la actividad">
+      <h2>Ficha de la actividad</h2>
+      <dl>
+        <dt>Actividad</dt><dd>Ciberperiodismo · UD2 (versión El Faro)</dd>
+        <dt>Uso</dt><dd>Pieza que puede analizarse en el apartado de diagnóstico del informe. Cita la pieza con su enlace o con un pantallazo.</dd>
+        <dt>Autoría</dt><dd>Profesorado</dd>
+        <dt>Materiales</dt><dd>Texto y datos sintéticos generados con IA y revisados por el docente.</dd>
+        <dt>Elementos simulados</dt><dd>Datos y fotografías (todos sintéticos o ilustrativos).</dd>
+        <dt>Importante</dt><dd>Analiza la pieza tal como está: no se ha preparado para mostrar ningún rasgo concreto.</dd>
+      </dl>
+      <p style="margin:12px 0 0"><a class="inl" href="ciberperiodismo-ud2.html" style="text-decoration:underline">Ver todas las piezas de la actividad</a></p>
+    </section>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-name">El Faro de Puerto Vera</p>
+    <div class="legal">
+      <strong>Aviso:</strong> este sitio es un medio ficticio creado como recurso docente del Proyecto de Innovación Docente <em>NewsroomLab IA</em> (Grado en Periodismo, Universidad Isabel I, curso 2026-2027). Puerto Vera, sus instituciones, empresas y personas son inventadas; cualquier parecido con la realidad es casual. Los contenidos son ejercicios del alumnado y del profesorado y no constituyen información periodística sobre hechos reales. Parte de los materiales de partida se han generado con inteligencia artificial.
+    </div>
+    <nav aria-label="Pie">
+      <a href="sobre.html">Sobre este medio</a>
+      <a href="sobre.html#normas">Normas de publicación</a>
+      <a href="sobre.html#retirada">Solicitar la retirada de una pieza</a>
+      <a href="puerto-vera.html">Enciclopedia de Puerto Vera</a>
+      <a href="ciberperiodismo-ud2.html">Material de la actividad UD2</a>
+    </nav>
+    <p style="margin-top:14px">Prototipo · NewsroomLab IA · 2026</p>
+  </div>
+</footer>
+<script>
+(function () {
+  var D = [
+    {id:'centro',   n:'Centro Histórico', p:31, a:46, v:38, cut:'parcial', x:252, y:245},
+    {id:'varadero', n:'El Varadero',      p:38, a:52, v:47, cut:'sí',      x:408, y:240},
+    {id:'atalaya',  n:'La Atalaya',       p:19, a:22, v:12, cut:'',        x:483, y:112},
+    {id:'ensanche', n:'Ensanche',         p:24, a:38, v:21, cut:'',        x:257, y:118},
+    {id:'levante',  n:'Playa de Levante', p:15, a:17, v:9,  cut:'',        x:550, y:236},
+    {id:'molinos',  n:'Los Molinos',      p:36, a:49, v:41, cut:'sí',      x:92,  y:122},
+    {id:'salinas',  n:'Las Salinas',      p:12, a:14, v:6,  cut:'',        x:92,  y:252}
+  ];
+  var M = {
+    perdidas: {key:'p', max:40, unit:'%',    name:'Pérdidas de agua (%)'},
+    antig:    {key:'a', max:55, unit:' años', name:'Antigüedad media de la red (años)'},
+    averias:  {key:'v', max:50, unit:'',      name:'Averías registradas en 2025'}
+  };
+  var COL = ['#dbe9f3','#a9c9e0','#6fa3c8','#326891','#1d3f58'];
+  var TXT = ['#121212','#121212','#121212','#ffffff','#ffffff'];
+  var metric = 'perdidas', sel = '';
+  var svg = document.getElementById('mapa'), labels = document.getElementById('labels');
+  var panel = document.getElementById('panel'), sS = document.getElementById('barrio-sel');
+  var NS = 'http://www.w3.org/2000/svg';
+
+  function bucket(v, max) { return Math.min(4, Math.floor(v / max * 5)); }
+  function byId(id) { for (var i = 0; i < D.length; i++) if (D[i].id === id) return D[i]; }
+
+  D.slice().sort(function (a, b) { return a.n.localeCompare(b.n, 'es'); }).forEach(function (d) {
+    var o = document.createElement('option'); o.value = d.id; o.textContent = d.n; sS.appendChild(o);
+  });
+  D.forEach(function (d) {
+    var t = document.createElementNS(NS, 'text'); t.setAttribute('x', d.x); t.setAttribute('y', d.y);
+    t.setAttribute('text-anchor', 'middle'); t.setAttribute('data-id', d.id);
+    var a = document.createElementNS(NS, 'tspan'); a.setAttribute('x', d.x); a.textContent = d.n;
+    var b = document.createElementNS(NS, 'tspan'); b.setAttribute('x', d.x); b.setAttribute('dy', '16'); b.setAttribute('class', 'val');
+    t.appendChild(a); t.appendChild(b); labels.appendChild(t);
+  });
+  var tb = document.querySelector('#tabla tbody');
+  D.forEach(function (d) {
+    var r = document.createElement('tr');
+    r.innerHTML = '<td>' + d.n + '</td><td>' + d.p + '</td><td>' + d.a + '</td><td>' + d.v + '</td>';
+    tb.appendChild(r);
+  });
+
+  function paint() {
+    var m = M[metric];
+    D.forEach(function (d) {
+      var poly = svg.querySelector('polygon[data-id="' + d.id + '"]');
+      var b = bucket(d[m.key], m.max);
+      poly.style.fill = COL[b];
+      poly.setAttribute('aria-label', d.n + ': ' + m.name + ' ' + d[m.key] + m.unit);
+      poly.classList.toggle('sel', d.id === sel);
+      var t = labels.querySelector('text[data-id="' + d.id + '"]');
+      t.style.fill = TXT[b];
+      t.querySelector('.val').textContent = d[m.key] + m.unit;
+    });
+    var lg = document.getElementById('leyenda'); lg.innerHTML = '';
+    for (var i = 0; i < 5; i++) {
+      var lo = Math.round(i * m.max / 5), hi = Math.round((i + 1) * m.max / 5);
+      lg.innerHTML += '<i style="background:' + COL[i] + '"></i><span>' + lo + (i === 4 ? ' o más' : '–' + hi) + '</span>';
+    }
+    document.querySelectorAll('.controls [data-metric]').forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-metric') === metric ? 'true' : 'false');
+    });
+  }
+  function show() {
+    paint();
+    if (!sel) { panel.innerHTML = '<h3>Pulsa un barrio</h3><p>Selecciona un barrio en el mapa o en el desplegable para ver sus datos.</p>'; return; }
+    var d = byId(sel), h = '<h3>' + d.n + '</h3><dl>' +
+      '<dt>Pérdidas de agua</dt><dd>' + d.p + ' %</dd>' +
+      '<dt>Antigüedad media de la red</dt><dd>' + d.a + ' años</dd>' +
+      '<dt>Averías en 2025</dt><dd>' + d.v + '</dd></dl>';
+    if (d.cut) h += '<p class="flag">Afectado' + (d.cut === 'parcial' ? ' en parte' : '') + ' por el corte del 2 de octubre. <a href="2026-10-corte-agua-cronologia.html">Ver la cronología</a>.</p>';
+    panel.innerHTML = h;
+  }
+  function choose(id) { sel = id; sS.value = id; show(); }
+
+  svg.querySelectorAll('.barrio').forEach(function (p) {
+    p.addEventListener('click', function () { choose(p.getAttribute('data-id')); });
+    p.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); choose(p.getAttribute('data-id')); } });
+  });
+  sS.addEventListener('change', function () { choose(sS.value); });
+  document.querySelectorAll('.controls [data-metric]').forEach(function (b) {
+    b.addEventListener('click', function () { metric = b.getAttribute('data-metric'); show(); });
+  });
+
+  /* Galería lineal con retorno */
+  var sl = document.getElementById('slider');
+  if (sl) {
+    var figs = sl.querySelectorAll('figure'), nav = sl.querySelector('.slider-nav'), cur = 0;
+    sl.classList.add('js'); nav.hidden = false;
+    function go(i) {
+      cur = (i + figs.length) % figs.length;
+      figs.forEach(function (f, k) { f.hidden = k !== cur; });
+      document.getElementById('sl-count').textContent = (cur + 1) + ' / ' + figs.length;
+    }
+    document.getElementById('sl-prev').addEventListener('click', function () { go(cur - 1); });
+    document.getElementById('sl-next').addEventListener('click', function () { go(cur + 1); });
+    go(0);
+  }
+  /* Tamaño del texto */
+  var fs = 1;
+  function setFs(v) { fs = Math.max(0.85, Math.min(1.4, v)); document.documentElement.style.setProperty('--fs', fs); }
+  document.getElementById('fs-down').addEventListener('click', function () { setFs(fs - 0.1); });
+  document.getElementById('fs-up').addEventListener('click', function () { setFs(fs + 0.1); });
+  show();
+})();
+</script>
+<script>
+(function () {
+  var b = document.getElementById('copy-link');
+  if (!b) return;
+  b.addEventListener('click', function () {
+    var ok = document.getElementById('copy-ok');
+    function done(t) { ok.textContent = t; setTimeout(function () { ok.textContent = ''; }, 2500); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(location.href.split('#')[0]).then(function () { done('Enlace copiado'); }, function () { done('No se pudo copiar'); });
+    } else { done('Copia la dirección desde la barra del navegador'); }
+  });
+})();
+</script>
+</body>
+</html>
