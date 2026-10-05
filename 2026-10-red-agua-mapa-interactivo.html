@@ -66,6 +66,9 @@
       <span>Compartir:</span>
       <button type="button" id="copy-link">Copiar enlace</button>
       <span id="copy-ok" class="ok" role="status" aria-live="polite"></span>
+      <span style="margin-left:14px">Tamaño del texto:</span>
+      <button type="button" id="fs-down" aria-label="Reducir el tamaño del texto">A-</button>
+      <button type="button" id="fs-up" aria-label="Aumentar el tamaño del texto">A+</button>
     </div>
 
     <div class="body">
@@ -155,10 +158,11 @@
     </details>
 
     <h2 style="font:700 22px var(--serif);margin:22px 0 6px">3. Tres puntos críticos</h2>
-    <div class="gallery">
-      <figure><div class="ph" role="img" aria-label="Imagen ilustrativa simulada de una tubería antigua">Imagen ilustrativa (simulación)</div><figcaption>Conducción de fibrocemento en El Varadero. Imagen ilustrativa de la simulación.</figcaption></figure>
-      <figure><div class="ph" role="img" aria-label="Imagen ilustrativa simulada de una zanja de reparación">Imagen ilustrativa (simulación)</div><figcaption>Zanja de reparación en la calle Atarazanas. Imagen ilustrativa de la simulación.</figcaption></figure>
-      <figure><div class="ph" role="img" aria-label="Imagen ilustrativa simulada de un depósito de agua">Imagen ilustrativa (simulación)</div><figcaption>Depósito de La Atalaya. Imagen ilustrativa de la simulación.</figcaption></figure>
+    <div class="slider" id="slider" role="group" aria-roledescription="carrusel" aria-label="Galería de tres imágenes">
+      <figure><div class="ph" role="img" aria-label="Imagen ilustrativa simulada de una tubería antigua">Imagen ilustrativa (simulación)</div><figcaption>1. Conducción de fibrocemento en El Varadero. Imagen ilustrativa de la simulación.</figcaption></figure>
+      <figure><div class="ph" role="img" aria-label="Imagen ilustrativa simulada de una zanja de reparación">Imagen ilustrativa (simulación)</div><figcaption>2. Zanja de reparación en la calle Atarazanas. Imagen ilustrativa de la simulación.</figcaption></figure>
+      <figure><div class="ph" role="img" aria-label="Imagen ilustrativa simulada de un depósito de agua">Imagen ilustrativa (simulación)</div><figcaption>3. Depósito de La Atalaya. Imagen ilustrativa de la simulación.</figcaption></figure>
+      <div class="slider-nav" hidden><button type="button" id="sl-prev">Anterior</button><span id="sl-count" aria-live="polite">1 / 3</span><button type="button" id="sl-next">Siguiente</button></div>
     </div>
 
     <div class="body">
@@ -282,6 +286,26 @@
   document.querySelectorAll('.controls [data-metric]').forEach(function (b) {
     b.addEventListener('click', function () { metric = b.getAttribute('data-metric'); show(); });
   });
+
+  /* Galería lineal con retorno */
+  var sl = document.getElementById('slider');
+  if (sl) {
+    var figs = sl.querySelectorAll('figure'), nav = sl.querySelector('.slider-nav'), cur = 0;
+    sl.classList.add('js'); nav.hidden = false;
+    function go(i) {
+      cur = (i + figs.length) % figs.length;
+      figs.forEach(function (f, k) { f.hidden = k !== cur; });
+      document.getElementById('sl-count').textContent = (cur + 1) + ' / ' + figs.length;
+    }
+    document.getElementById('sl-prev').addEventListener('click', function () { go(cur - 1); });
+    document.getElementById('sl-next').addEventListener('click', function () { go(cur + 1); });
+    go(0);
+  }
+  /* Tamaño del texto */
+  var fs = 1;
+  function setFs(v) { fs = Math.max(0.85, Math.min(1.4, v)); document.documentElement.style.setProperty('--fs', fs); }
+  document.getElementById('fs-down').addEventListener('click', function () { setFs(fs - 0.1); });
+  document.getElementById('fs-up').addEventListener('click', function () { setFs(fs + 0.1); });
   show();
 })();
 </script>

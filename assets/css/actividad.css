@@ -120,3 +120,11 @@ details.datos summary { cursor: pointer; font-weight: 700; }
   .mapgrid { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: 1fr; }
 }
+
+/* Tamaño del texto ajustable y galería lineal */
+.article.wide .body p { font-size: calc(19px * var(--fs, 1)); }
+.slider figure { margin: 0; }
+.slider-nav { display: flex; gap: 12px; align-items: center; justify-content: center; font: 13px var(--sans); margin-top: 10px; }
+.slider-nav button { font: 600 13px var(--sans); background: #fff; border: 1px solid var(--ink); padding: 5px 12px; border-radius: 2px; cursor: pointer; }
+.slider-nav button:hover { background: var(--paper); }
+.slider figure[hidden] { display: none; }
