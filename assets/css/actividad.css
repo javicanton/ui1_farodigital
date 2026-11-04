@@ -146,3 +146,39 @@ details.datos summary { cursor: pointer; font-weight: 700; }
 .aula-tag { align-self: flex-start; font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #1d3f58; background: #e6eff6; border: 1px solid #326891; padding: 1px 6px; border-radius: 2px; }
 .aula-go { margin-top: 6px; font-weight: 700; color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
 @media (max-width: 760px) { .aula-cards { grid-template-columns: 1fr; } }
+
+/* Publicación de El Faro en redes (simulada) y tabla de datos */
+.promo-sim { margin: 28px 0; font-family: var(--sans); font-size: 14px; }
+.promo-sim h2 { font: 700 12px var(--sans) !important; text-transform: uppercase; letter-spacing: .08em; margin: 0 0 8px !important; }
+.promo-sim .post { border: 1px solid var(--rule-strong); border-radius: 10px; padding: 12px 14px; max-width: 540px; background: #fff; }
+.promo-sim .post p { margin: 0 0 8px !important; font-size: 15px !important; line-height: 1.4; }
+.promo-sim .who { display: flex; align-items: center; gap: 8px; }
+.promo-sim .who span:last-child { color: var(--muted); font-size: 13px; }
+.promo-sim .avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: #fff; display: inline-flex; align-items: center; justify-content: center; font: 700 15px var(--serif); }
+.promo-sim .linkcard { border: 1px solid var(--rule); border-radius: 8px; padding: 8px 10px; font-weight: 600; background: var(--paper); }
+.promo-sim .linkcard span { display: block; font-weight: 400; font-size: 12px; color: var(--muted); }
+.promo-sim small { display: block; color: var(--muted); margin-top: 6px; }
+.datatable { border-collapse: collapse; width: 100%; margin-top: 10px; font-size: 14px; }
+.datatable caption { text-align: left; font-weight: 700; margin-bottom: 6px; }
+.datatable th, .datatable td { border-bottom: 1px solid var(--rule); padding: 5px 8px; text-align: right; }
+.datatable th[scope="row"], .datatable thead th:first-child { text-align: left; }
+
+/* Doble reloj (reportaje de perfil) */
+.dual-clock { margin: 24px 0; font-family: var(--sans); font-size: 14px; border-top: 3px solid var(--ink); }
+.dual-clock .dc-title { font: 700 16px var(--serif); margin: 10px 0 8px; }
+.dual-clock .dc-head, .dual-clock li { display: grid; grid-template-columns: 56px 1fr 1fr; gap: 10px; align-items: start; }
+.dual-clock .dc-head { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding-bottom: 4px; border-bottom: 1px solid var(--rule-strong); }
+.dual-clock .dc-head span:nth-child(2) { color: #326891; } .dual-clock .dc-head span:nth-child(3) { color: #a43b2f; }
+.dual-clock ol { list-style: none; margin: 0; padding: 0; }
+.dual-clock li { padding: 7px 0; border-bottom: 1px solid var(--rule); }
+.dual-clock time { font-weight: 700; }
+.dual-clock li.v .dc-ev { grid-column: 2; color: #1d3f58; border-left: 3px solid #326891; padding-left: 8px; }
+.dual-clock li.i .dc-ev { grid-column: 3; color: #7d2b22; border-left: 3px solid #a43b2f; padding-left: 8px; }
+.dual-clock li.both .dc-ev { grid-column: 2 / 4; font-weight: 700; }
+@media (max-width: 560px) {
+  .dual-clock .dc-head { display: none; }
+  .dual-clock li, .dual-clock li.v .dc-ev, .dual-clock li.i .dc-ev, .dual-clock li.both .dc-ev { grid-template-columns: 50px 1fr; grid-column: 2; }
+  .dual-clock li.v .dc-ev::before { content: "Vecinos · "; font-weight: 700; }
+  .dual-clock li.i .dc-ev::before { content: "Instituciones · "; font-weight: 700; }
+}
+.article .body .keypoints h2 { font: 700 12px var(--sans); text-transform: uppercase; letter-spacing: .08em; margin: 0 0 6px; }

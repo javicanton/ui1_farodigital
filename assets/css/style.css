@@ -290,3 +290,5 @@ table.plain th { border-bottom: 2px solid var(--ink); font-size: 12px; text-tran
   .brief-card dd { margin-bottom: 8px; }
   .topline .tl-right { display: none; }
 }
+
+@media (max-width: 1100px) { .mainnav li a { padding: 10px 8px; } }
