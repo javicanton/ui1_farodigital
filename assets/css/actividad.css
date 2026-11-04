@@ -134,3 +134,15 @@ details.datos summary { cursor: pointer; font-weight: 700; }
 .social-sim { border: 1px solid var(--rule-strong); background: var(--paper); padding: 12px 14px; margin: 22px 0; font-family: var(--sans); font-size: 14px; max-width: 520px; }
 .social-sim p { margin: 0 0 6px !important; font-size: 14px !important; }
 .social-sim small { color: var(--muted); }
+
+/* Bloque de actividades del aula en la portada */
+.aula-banner { border: 1px solid var(--ink); border-top: 4px solid #326891; background: var(--paper); padding: 16px 20px 18px; margin: 18px 0 8px; font-family: var(--sans); }
+.aula-head h2 { font: 700 13px var(--sans); text-transform: uppercase; letter-spacing: .08em; margin: 0 0 4px; }
+.aula-head p { margin: 0 0 12px; font-size: 14px; color: var(--ink-2); }
+.aula-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.aula-card { display: flex; flex-direction: column; gap: 4px; background: #fff; border: 1px solid var(--ink); padding: 12px 14px; color: var(--ink); text-decoration: none; font-size: 14px; }
+.aula-card strong { font: 700 19px var(--serif); line-height: 1.25; }
+.aula-card:hover, .aula-card:focus-visible { background: #e6eff6; text-decoration: none; }
+.aula-tag { align-self: flex-start; font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #1d3f58; background: #e6eff6; border: 1px solid #326891; padding: 1px 6px; border-radius: 2px; }
+.aula-go { margin-top: 6px; font-weight: 700; color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+@media (max-width: 760px) { .aula-cards { grid-template-columns: 1fr; } }
